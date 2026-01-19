@@ -1,0 +1,82 @@
+body{ font-family:Arial; padding:20px; }
+
+/* General Boxes */
+.box{ border:2px solid #000; margin-bottom:20px; }
+
+/* Task 1 Padding */
+.pad20{ padding:20px; }
+.pad40{ padding:40px; }
+.pad80{ padding:80px; }
+
+/* Task 2 Margin */
+.margin40{ margin:40px; }
+
+/* Task 3 Background */
+.bg-blue{ background:lightblue; }
+.bg-green{ background:lightgreen; }
+.margin30{ margin:30px; }
+.pad30{ padding:30px; }
+
+/* Task 4 */
+.task4{ padding:10px 50px 30px 70px; margin:60px 20px; }
+
+/* Task 5 */
+.neg-padding{ padding:-20px; }
+.neg-margin{ margin:-20px; }
+
+/* Task 6 Collapse */
+.box1{ margin-bottom:50px; background:#d4edda; }
+.box2{ margin-top:30px; background:#f8d7da; }
+
+/* Task 7 */
+.block{ padding:20px; margin:20px; }
+.inline{ display:inline; border:1px solid; padding:20px; margin:20px; }
+.inline-block{ display:inline-block; border:1px solid; padding:20px; margin:20px; }
+
+/* Task 8 */
+.without-flex{ border:2px solid; padding:10px; margin-bottom:20px;}
+.flex-row{ display:flex; border:2px solid; margin-bottom:20px; }
+.flex-row div{ border:1px solid; padding:20px; }
+
+/* Task 10 */
+.margin-items div{ margin:20px; }
+.flex-gap{ display:flex; gap:20px; border:2px solid; }
+
+/* Task 11 */
+.flex-col{ display:flex; flex-direction:column; border:2px solid; }
+
+/* Task 12 */
+.justify-between{ justify-content:space-between; }
+
+/* Task 13 */
+.align-center{ align-items:center; }
+.big-box{ height:120px; border:2px solid; }
+.small-pad{ padding:10px; border:1px solid; }
+.large-pad{ padding:40px; border:1px solid; }
+
+/* Task 14 */
+.flex-auto{ display:flex; border:2px solid; padding:10px; }
+.flex-auto div{ border:1px solid; padding:10px; }
+.push-auto{ margin-left:auto; }
+
+/* Task 15 */
+.demo-button{ padding:15px 25px; margin:20px; }
+
+/* Task 16 */
+.card{ width:220px; border:1px solid; border-radius:6px; padding:15px; margin-bottom:20px; }
+.card img{ width:100%; border-radius:6px; margin-bottom:10px; }
+
+/* Task 17 */
+.illusion{ width:150px; height:150px; border:1px solid; margin-bottom:20px; }
+.pad-box{ padding:40px; }
+.margin-box{ margin:40px; }
+
+/* Task 18 */
+.bs-container{ display:flex; border:2px solid; }
+.bs-container .item{ width:150px; padding:40px; border:1px solid; }
+.bs-container-fixed{ display:flex; border:2px solid; }
+.bs-container-fixed .item{ width:150px; padding:40px; border:1px solid; box-sizing:border-box; }
+
+/* Task 19 */
+.center-margin{ height:200px; width:200px; border:2px solid; margin:auto; }
+.center-flex{ height:200px; border:1px solid; display:flex; align-items:center; justify-content:center; }
