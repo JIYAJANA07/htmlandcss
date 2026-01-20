@@ -1,139 +1,379 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSS Box-Model & Flex Lab</title>
-    <link rel="stylesheet" href="style.css">
+  
+  <title>CSS Box Model </title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #28d6ed;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      border-bottom: 2px solid #000;
+    }
+
+    .demo {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+    }
+
+
+    .padding-box {
+      padding: 20px; 
+      border: 2px solid black;
+      background: rgb(139, 200, 220);
+    }
+
+
+
+
+    .margin-box {
+      margin: 40px;
+      border: 2px solid black;
+      background: rgb(203, 107, 107);
+    }
+
+   
+
+    .padding-bg {
+      padding: 30px;
+      background: rgb(98, 191, 98);
+      border: 2px solid black;
+    }
+
+    .margin-bg {
+      margin: 30px;
+      background: rgb(75, 151, 75);
+      border: 2px solid black;
+    }
+
+
+
+    .shorthand-box {
+      padding: 10px 50px 30px 70px;
+      margin: 60px 20px;
+      border: 2px solid black;
+      background: #e0e0ff;
+    }
+
+
+    .negative-test {
+      margin: -20px;
+      padding: -20px; 
+      background: yellow;
+      border: 2px solid black;
+    }
+
+    .box1 {
+      margin-bottom: 50px;
+      background: #482222;
+      padding: 20px;
+    }
+
+    .box2 {
+      margin-top: 30px;
+      background: #621d1d;
+      padding: 20px;
+    }
+
+
+    span.inline {
+      margin: 20px;
+      padding: 20px;
+      background: rgb(218, 164, 64);
+    }
+
+    span.inline-block {
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+      background: orange;
+    }
+
+   
+
+    .flex-container {
+      display: flex;
+      gap: 20px;
+      background: #222;
+      padding: 20px;
+    }
+
+    .flex-item {
+      background: white;
+      padding: 20px;
+      width: 100px;
+      text-align: center;
+    }
+
+    .auto {
+      margin-left: auto;
+      background: lightgreen;
+    }
+
+    button {
+      padding: 15px 30px; 
+      margin: 20px;       
+      font-size: 16px;
+    }
+
+
+
+    .card-container {
+      display: flex;
+      gap: 30px;
+    }
+
+    .card {
+      width: 250px;
+      border: 1px solid #aaa;
+      padding: 20px; 
+      background: #fff;
+    }
+
+
+
+    .illusion-padding {
+      width: 100px;
+      height: 100px;
+      padding: 40px;
+      background: lightblue;
+    }
+
+    .illusion-margin {
+      width: 100px;
+      height: 100px;
+      margin: 40px;
+      background: lightpink;
+    }
+
+    .overflow {
+      width: 150px;
+      padding: 40px;
+      background: rgb(206, 87, 87);
+      color: white;
+      box-sizing: border-box;
+    }
+
+    .center-fail {
+      margin-top: 50%;
+    }
+
+    .center-success {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background: #333;
+      color: white;
+    }
+
+
+  </style>
 </head>
+
 <body>
+    
 
-<h2>Task 1 — Content vs Padding</h2>
-<div class="box pad20">Padding 20px</div>
-<div class="box pad40">Padding 40px</div>
-<div class="box pad80">Padding 80px</div>
+<h1>CSS Box Model & Flexbox — Code + Answers</h1>
 
-<h2>Task 2 — Content vs Margin</h2>
-<div class="box margin40 bg-blue">Margin 40px</div>
+<h2>Task 1</h2>
+<div class="demo padding-box">Padding increases inner space</div>
+<p>
+      <ol>ANSWERS:
+      <li>- Padding increases visible size of element </li>
+      <li>- Padding does NOT directly affect nearby elements </li>
+      <li>- Padding belongs to the element itself </li>
+    </ol>
+</p>
 
-<h2>Task 3 — Background Visibility</h2>
-<div class="box pad30 bg-green">Padding Box</div>
-<div class="box margin30 bg-green">Margin Box</div>
+<h2>Task 2</h2>
+<div class="demo margin-box">Margin creates outer space</div>
+<p>
+    <ol>ANSWERS
+    <li> - Margin does NOT increase element size </li>
+    <li>- Margin does NOT belong to the element </li>
+    <li>- Margin creates space outside the border</li>
+    </ol>
+</p>
 
-<h2>Task 4 — Side Specific Spacing</h2>
-<div class="box task4">Padding + Margin Shorthand</div>
+<h2>Task 3</h2>
+<div class="padding-bg">Padding colored</div>
+<div class="margin-bg">Margin invisible</div>
 
-<h2>Task 5 — Negative Values (Experiment)</h2>
-<div class="box neg-padding">Invalid Padding</div>
-<div class="box neg-margin">Negative Margin</div>
+<p>
+      
+     <ol> ANSWERS:
+      <li>- Padding area is colored </li>
+      <li>- Margin is transparent </li>
+      <li>- Background applies to content + padding only </li>
+    </ol>
 
-<hr>
+</p>
 
-<h2>Task 6 — Margin Collapse</h2>
+<h2>Task 4</h2>
+<div class="shorthand-box">Shorthand demo</div>
+
+<p>
+      <ol>
+      <li>Padding: top 10 , right 50 , bottom 30 ,left 70</li>
+      <li>Margin: top-bottom 60 , left-right 20 </li>
+
+      <li>Shorthand improves readability when values are logical </li>
+      <li>Individual properties improve clarity when values differ </li>
+      </ol>
+</p>
+
+<h2>Task 5</h2>
+<div class="negative-test">Negative margin works</div>
+
+
+<p>
+    <ol>ANSWERS  
+      <li>- Negative padding is invalid  </li>
+      <li>- Negative margin is allowed </li>
+      <li>- Negative margins pull elements closer or overlap </li>
+    </ol>
+</p>
+
+<h2>Task 6</h2>
 <div class="box1">Box 1</div>
 <div class="box2">Box 2</div>
 
-<hr>
+<p>
 
-<h2>Task 7 — Inline vs Block</h2>
-<div class="box block">DIV block</div>
-<span class="inline">SPAN inline</span>
-<br><br>
-<span class="inline-block">SPAN inline-block</span>
+    <ol>ANSWER
+      <li>Final space = 50px (not 80px) </li>
+      <li> Explanation:
+      Vertical margins collapse — the larger margin wins
+      Padding does NOT collapse</li>
+    </ol>
+</p>
+     
 
-<hr>
 
-<h2>Task 8 — Why Flex Exists</h2>
-<div class="without-flex">A B C stack</div>
-<div class="flex-row">
-    <div>A</div><div>B</div><div>C</div>
+
+<h2>Task 7</h2>
+<span class="inline">Inline</span>
+<span class="inline-block">Inline-block</span>
+
+<p>
+
+    <ol>
+      Inline:
+      <li>- Padding works visually </li>
+      <li>- Vertical margin unreliable </li>
+
+      <li>Inline-block: </li>
+      <li>- Margin & padding work fully </li>
+    </ol>
+</p>
+
+<h2>Task 8–14</h2>
+<div class="flex-container">
+  <div class="flex-item">One</div>
+  <div class="flex-item">Two</div>
+  <div class="flex-item auto">Auto</div>
 </div>
 
-<h2>Task 9 — Padding in Flex</h2>
-<div class="flex-row">
-    <div>Item 1</div><div>Item 2</div><div>Item 3</div>
+<p>
+    <ol>FLEX EFFECTS:
+      <li>1. Children align in row </li>
+     <li> 2. Equal height behavior</li>
+    <li> 3. Controlled spacing</li>
+
+      <li>Flex solves alignment & spacing problems </li>
+
+     <li> Auto margins consume free space </li>
+      <li>Used in navbars, toolbars </li>
+   
+      <li>Padding = internal spacing</li>
+      <li>Gap/Margin = external spacing </li>
+</ol>     
+</p>
+
+
+
+<h2>Task 15</h2>
+<button>Click Me</button>
+
+<p>
+    <ol>
+    <li> Padding increases clickable area </li>
+      <li>Margin affects layout spacing </li>
+    <li>Padding improves accessibility </li>
+ </ol>
+
+</p>
+
+<h2>Task 16</h2>
+<div class="card-container">
+  <div class="card">
+    <h3>Card</h3>
+    <p>Text</p>
+    <button>Action</button>
+  </div>
 </div>
 
-<h2>Task 10 — Margin vs Gap</h2>
-<div class="flex-row margin-items">
-    <div>Margin</div><div>Margin</div><div>Margin</div>
-</div>
-<div class="flex-gap">
-    <div>Gap</div><div>Gap</div><div>Gap</div>
-</div>
+<h2>Task 17</h2>
+<div class="illusion-padding">Padding</div>
+<div class="illusion-margin">Margin</div>
 
-<h2>Task 11 — Flex Axis</h2>
-<div class="flex-row axis-row">
-    <div>Row 1</div><div>Row 2</div><div>Row 3</div>
-</div>
-<div class="flex-col axis-col">
-    <div>Col 1</div><div>Col 2</div><div>Col 3</div>
-</div>
+<p>
+     <ol> 
+      <li>Padding box appears larger visually </li>
+      <li>Margin box occupies more layout space </li>
+      <li>Designers confuse visual vs layout size </li>
+      </ol>
+</p>
 
-<hr>
+<h2>Task 18</h2>
+<div class="overflow">Fixed Width</div>
 
-<h2>Task 12 — justify-content</h2>
-<div class="flex-row justify-between">
-    <div>Left</div><div>Mid</div><div>Right</div>
-</div>
+<p>
+    <ol>
+     <li> Overflow caused because width + padding exceeded container </li>
+     <li> box-sizing: border-box fixes it</li>
+    </ol>
+</p>
 
-<hr>
+<h2>Task 19</h2>
+<div class="center-success">Centered</div>
+<p>
+     <ol>
+     <li> Margin fails for centering </li>
+     <li> Flex works because it understands container space </li>
+  </ol>
 
-<h2>Task 13 — align-items & Padding</h2>
-<div class="flex-row align-center big-box">
-    <div class="small-pad">Small</div>
-    <div class="large-pad">Large</div>
-</div>
+</p>
 
-<hr>
+<h2>Task 20 – FINAL RULES</h2>
+<p>
+    <ol>
+RULES FOR MAINTAINABLE CSS
 
-<h2>Task 14 — Auto Margin in Flex</h2>
-<div class="flex-auto">
-    <div>Item A</div>
-    <div class="push-auto">Item B</div>
-</div>
+<li> Padding is for internal spacing only</li>
+<li> Margin is for separating components</li>
+<li> Never use margin for alignment</li>
+<li> Use flexbox for layout & centering</li>
+<li> Let containers control spacing, not children</li>
 
-<hr>
+<ol>
 
-<h2>Task 15 — Button Design</h2>
-<button class="demo-button">Button Example</button>
+<li>This improves:</li>
+<li> Predictability</li>
+<li> Reusability</li>
+<li>Debugging speed</li>
+</ol>
+</ol>
+</p>
 
-<hr>
-
-<h2>Task 16 — Card Component</h2>
-<div class="card">
-    <img src="https://via.placeholder.com/200">
-    <h3>Card Title</h3>
-    <p>Some card text here...</p>
-    <button class="demo-button">Action</button>
-</div>
-
-<hr>
-
-<h2>Task 17 — Box Illusion</h2>
-<div class="illusion pad-box">Padding Box</div>
-<div class="illusion margin-box">Margin Box</div>
-
-<hr>
-
-<h2>Task 18 — Overflow + Box Sizing</h2>
-<p>Problem:</p>
-<div class="bs-container">
-    <div class="item">Item</div><div class="item">Item</div>
-</div>
-<p>Fixed:</p>
-<div class="bs-container-fixed">
-    <div class="item">Item</div><div class="item">Item</div>
-</div>
-
-<hr>
-
-<h2>Task 19 — Margin vs Flex Centering</h2>
-<div class="center-margin"></div>
-<div class="center-flex">Centered with Flexbox</div>
-
-<hr>
-
-<h2>Task 20 — Rules (Write Theory)</h2>
-<p>Write rules manually here.</p>
 
 </body>
 </html>
